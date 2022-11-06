@@ -201,6 +201,30 @@
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
         "code": "scalebar = ScaleBar(0.3/10000000, \"mm\")\nimshow_bar(imgx10000000,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar_Documentation_034_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"cm\", fixed_value = 1e-7)\nimshow_bar(imgx10000000,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar_Documentation_035_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"mm\", fixed_value = 1e-6)\nimshow_bar(imgx10000000,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar_Documentation_036_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"um\", fixed_value = 1e-3)\nimshow_bar(imgx10000000,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar_Documentation_037_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"pm\", fixed_value = 1000)\nimshow_bar(imgx10000000,scalebar) "
       }
     ]
   }
