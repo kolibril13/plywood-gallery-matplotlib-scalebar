@@ -1,0 +1,45 @@
+{
+  "plywood_metadata": {
+    "plywood_gallery_core_version": "0.0.9"
+  },
+  "plywood_content": {
+    "Scalebar1": [
+      {
+        "image_path": "gallery_assets/Scalebar1_011_Foo.png",
+        "celltype": "Header",
+        "css": "border: 3px solid #ED6A5A;width:120px",
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib_scalebar.scalebar import ScaleBar\nimport matplotlib.image as mpimg\n%config InlineBackend.figure_format=&#39;retina&#39;\n%config InlineBackend.print_figure_kwargs = {&#39;pad_inches&#39;:0}\n\ndef imshow_bar(im,scalebar):\n    fig, ax = plt.subplots(figsize=(2,2), dpi=60)\n    ax.axis(\"off\")\n    ax.imshow(im)\n    ax.add_artist(scalebar);\n\nimg = mpimg.imread(&#39;orange.png&#39;)"
+      },
+      {
+        "image_path": "gallery_assets/Scalebar1_012_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.1, \"mm\", location=\"upper right\")\nimshow_bar(img,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar1_013_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.1, \"mm\", location=\"upper left\")\nimshow_bar(img,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar1_014_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.1, \"mm\", location=\"lower left\")\nimshow_bar(img,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar1_015_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.1, \"mm\", location=\"lower right\")\nimshow_bar(img,scalebar) "
+      },
+      {
+        "image_path": "gallery_assets/Scalebar1_016_Bar.png",
+        "celltype": "Normal",
+        "css": "border: 3px solid #007AB8;width:120px",
+        "code": "scalebar = ScaleBar(0.1, \"mm\")\nimshow_bar(img,scalebar) "
+      }
+    ]
+  }
+}
