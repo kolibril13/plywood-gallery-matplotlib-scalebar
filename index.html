@@ -8,7 +8,7 @@
     <title>Matplotlib Scalebar</title>
     <meta name="description" content="Cheat sheet made with https://github.com/kolibril13/plywood-gallery
 ">
-    
+
 
     <!-- OpenGraph Meta Tags -->
     <meta property="og:url" content="https://github.com/kolibril13/plywood-gallery-matplotlib-scalebar">
@@ -16,7 +16,8 @@
     <meta property="og:title" content="Matplotlib Scalebar">
     <meta property="og:description" content="Cheat sheet made with https://github.com/kolibril13/plywood-gallery
 ">
-    <meta property="og:image" content="https://kolibril13.github.io/plywood-gallery-matplotlib-scalebar/preview_image.png">
+    <meta property="og:image"
+        content="https://kolibril13.github.io/plywood-gallery-matplotlib-scalebar/preview_image.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -25,10 +26,11 @@
     <meta name="twitter:title" content="Matplotlib Scalebar">
     <meta name="twitter:description" content="Cheat sheet made with https://github.com/kolibril13/plywood-gallery
 ">
-    <meta name="twitter:image" content="https://kolibril13.github.io/plywood-gallery-matplotlib-scalebar/preview_image.png">
+    <meta name="twitter:image"
+        content="https://kolibril13.github.io/plywood-gallery-matplotlib-scalebar/preview_image.png">
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-        
+
 
 
 
@@ -267,7 +269,9 @@
             .container_info {
                 position: static;
             }
-
+            .image_attribution{
+                opacity: 0;
+            }
 
 
         }
@@ -277,6 +281,7 @@
             .whole_page {
                 width: 95%;
             }
+
         }
 
         /* TODO: This should be done with a smooth transition. */
@@ -291,11 +296,31 @@
                 ;
             }
         }
+
+        .image_attribution ul {
+            margin-top: 4px;
+        }
+
+        .image_attribution {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 
 <body style="background-color:#ece6e2;">
-
+    <div class="image_attribution">
+        Image Attribution:
+        <ul>
+            <li>
+                <a href="https://cdn.rcsb.org/pdb101/molecular-machinery/">Photosystem II</a> by David S. Goodsell
+            </li>
+            <li>
+                <a href="https://openmoji.org/library/emoji-1F34B/"> Lemon </a> by OpenMoji
+            </li>
+        </ul>
+    </div>
     <div class="whole_page">
 
         <div style="text-align:center">
@@ -389,7 +414,7 @@
     request.send(null);
     let json_content_all = JSON.parse(request.responseText);
     jsonData = json_content_all["plywood_content"]
-    
+
     const gallery_area = document.getElementById("gallery_container");
 
     for (let key of Object.keys(jsonData)) {
