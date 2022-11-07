@@ -8,223 +8,223 @@
         "image_path": "gallery_assets/Scalebar_Documentation_001_Foo.png",
         "celltype": "Header",
         "css": "border: 3px solid #ED6A5A;width:120px",
-        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib_scalebar.scalebar import ScaleBar\nimport matplotlib.image as mpimg\n%config InlineBackend.figure_format=&#39;retina&#39;\n%config InlineBackend.print_figure_kwargs = {&#39;pad_inches&#39;:0}\n\ndef imshow_bar(im,scalebar):\n    fig, ax = plt.subplots(figsize=(2,2), dpi=60)\n    ax.axis(\"off\")\n    ax.imshow(im)\n    ax.add_artist(scalebar);\n\nimg = mpimg.imread(&#39;green.png&#39;)"
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib_scalebar.scalebar import ScaleBar\nimport matplotlib.image as mpimg\n\n%config InlineBackend.figure_format=&#39;retina&#39;\n%config InlineBackend.print_figure_kwargs = {&#39;pad_inches&#39;:0}\n\n\ndef imshow_bar(im, scalebar):\n    fig, ax = plt.subplots(figsize=(2, 2), dpi=60)\n    ax.axis(\"off\")\n    ax.imshow(im)\n    ax.add_artist(scalebar)\n\n\nimg = mpimg.imread(\"green.png\")"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_002_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"upper right\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"upper right\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_003_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"upper left\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"upper left\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_004_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"lower left\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"lower left\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_005_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"lower right\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", location=\"lower right\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_006_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_007_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\",scale_loc= \"right\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", scale_loc=\"right\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_008_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\",scale_loc= \"left\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", scale_loc=\"left\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_009_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\",scale_loc= \"top\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", scale_loc=\"top\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_010_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", border_pad=1)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", border_pad=1)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_011_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", pad = 1)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", pad=1)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_012_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", sep=0)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", sep=0)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_013_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", sep=10)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", sep=10)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_014_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(1, \"px\", dimension=\"pixel-length\",length_fraction=0.3)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(1, \"px\", dimension=\"pixel-length\", length_fraction=0.3)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_015_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.03/2.54, \"in\", dimension=\"imperial-length\", length_fraction=0.3)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.03 / 2.54, \"in\", dimension=\"imperial-length\", length_fraction=0.3)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_016_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", length_fraction=1)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", length_fraction=1)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_017_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", height_fraction=0.05)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", height_fraction=0.05)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_018_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", rotation=\"vertical\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", rotation=\"vertical\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_019_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_020_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", color=\"blue\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", color=\"blue\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_021_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", box_color=\"skyblue\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", box_color=\"skyblue\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_022_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", box_color=\"skyblue\", box_alpha=0.3)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", box_color=\"skyblue\", box_alpha=0.3)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_023_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", frameon=False)\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", frameon=False)\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_024_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_025_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\",font_properties= \"serif\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", font_properties=\"serif\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_026_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\",font_properties= \"monospace\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", font_properties=\"monospace\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_027_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", label_loc = \"bottom\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", label_loc=\"bottom\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_028_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", label_loc = \"right\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", label=\"Lemon\", label_loc=\"right\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_029_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3, \"mm\",scale_formatter = lambda value, unit: f\"{value/5} limo\")\nimshow_bar(img,scalebar) "
+        "code": "scalebar = ScaleBar(0.3, \"mm\", scale_formatter=lambda value, unit: f\"{value/5} limo\")\nimshow_bar(img, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_030_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/5, \"mm\")\nimshow_bar(imgx5,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 5, \"mm\")\nimshow_bar(imgx5, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_031_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/100, \"mm\")\nimshow_bar(imgx100,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 100, \"mm\")\nimshow_bar(imgx100, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_032_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000, \"mm\")\nimshow_bar(imgx10000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000, \"mm\")\nimshow_bar(imgx10000, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_033_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\")\nimshow_bar(imgx10000000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000000, \"mm\")\nimshow_bar(imgx10000000, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_034_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"cm\", fixed_value = 1e-7)\nimshow_bar(imgx10000000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000000, \"mm\", fixed_units=\"cm\", fixed_value=1e-7)\nimshow_bar(imgx10000000, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_035_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"mm\", fixed_value = 1e-6)\nimshow_bar(imgx10000000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000000, \"mm\", fixed_units=\"mm\", fixed_value=1e-6)\nimshow_bar(imgx10000000, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_036_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"um\", fixed_value = 1e-3)\nimshow_bar(imgx10000000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000000, \"mm\", fixed_units=\"um\", fixed_value=1e-3)\nimshow_bar(imgx10000000, scalebar)"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_037_Bar.png",
         "celltype": "Normal",
         "css": "border: 3px solid #007AB8;width:120px",
-        "code": "scalebar = ScaleBar(0.3/10000000, \"mm\", fixed_units=\"pm\", fixed_value = 1000)\nimshow_bar(imgx10000000,scalebar) "
+        "code": "scalebar = ScaleBar(0.3 / 10000000, \"mm\", fixed_units=\"pm\", fixed_value=1000)\nimshow_bar(imgx10000000, scalebar)"
       }
     ]
   }
