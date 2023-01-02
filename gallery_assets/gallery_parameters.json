@@ -1,6 +1,6 @@
 {
   "plywood_metadata": {
-    "plywood_gallery_core_version": "0.0.9"
+    "plywood_gallery_core_version": "0.0.12"
   },
   "plywood_content": {
     "Scalebar Documentation": [
@@ -8,7 +8,7 @@
         "image_path": "gallery_assets/Scalebar_Documentation_001_Foo.png",
         "celltype": "Header",
         "css": "border: 3px solid #ED6A5A;width:120px",
-        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib_scalebar.scalebar import ScaleBar\nimport matplotlib.image as mpimg\n\n%config InlineBackend.figure_format=&#39;retina&#39;\n%config InlineBackend.print_figure_kwargs = {&#39;pad_inches&#39;:0}\n\n\ndef imshow_bar(im, scalebar):\n    fig, ax = plt.subplots(figsize=(2, 2), dpi=60)\n    ax.axis(\"off\")\n    ax.imshow(im)\n    ax.add_artist(scalebar)\n\n\nimg = mpimg.imread(\"green.png\")"
+        "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib_scalebar.scalebar import ScaleBar\nimport matplotlib.image as mpimg\n\n%config InlineBackend.figure_format='retina'\n%config InlineBackend.print_figure_kwargs = {'pad_inches':0}\n\n\ndef imshow_bar(im, scalebar):\n    fig, ax = plt.subplots(figsize=(2, 2), dpi=60)\n    ax.axis(\"off\")\n    ax.imshow(im)\n    ax.add_artist(scalebar)\n\n\nimg = mpimg.imread(\"green.png\")"
       },
       {
         "image_path": "gallery_assets/Scalebar_Documentation_002_Bar.png",
