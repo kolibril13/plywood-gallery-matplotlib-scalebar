@@ -8,7 +8,7 @@
     <title>Matplotlib Scalebar</title>
     <meta name="description" content="Cheat sheet made with https://github.com/kolibril13/plywood-gallery
 ">
-    
+
 
     <!-- OpenGraph Meta Tags -->
     <meta property="og:url" content="https://github.com/kolibril13/plywood-gallery-matplotlib-scalebar">
@@ -28,7 +28,7 @@
     <meta name="twitter:image" content="https://kolibril13.github.io/plywood-gallery-matplotlib-scalebar/preview_image.png">
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-        
+
 
 
 
@@ -79,7 +79,9 @@
             width: 600px;
         }
 
-        .container_code .close_button {
+
+
+        .container_code .my_copy_button {
             position: absolute;
             top: 17px;
             right: -14px;
@@ -87,7 +89,7 @@
 
         }
 
-        .container_code .close_button button {
+        .container_code .my_copy_button button {
             border-radius: 4px;
             background-color: lightgrey;
             height: 18px;
@@ -97,9 +99,49 @@
             border-width: 0;
         }
 
-        .container_code .close_button button:hover {
+        .container_code .my_copy_button button:hover {
             opacity: 0.6;
         }
+
+        .tooltipCopy {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltipCopy .tooltipCopytext {
+            visibility: hidden;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            width: 45px;
+            margin-left: -28px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltipCopy .tooltipCopytext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltipCopy:hover .tooltipCopytext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
 
         /* .gallery_container{
 } */
@@ -300,9 +342,14 @@
 <b>Code:</b>
 <code class="python" id="code_snippet"> <br> </code>
 </pre> <!-- better naming of these divs here-->
-            <div class='close_button'>
-                <button type="button" onclick="resetContent(this)">X</button>
+            <div class="tooltipCopy my_copy_button">
+                <button onclick="myFunction()" onmouseout="outFunc()">
+                    <span class="tooltipCopytext" id="CopyTooltip">Copy</span>
+                    <img src="https://raw.githubusercontent.com/executablebooks/sphinx-copybutton/4a8050dea36536b005d3e757b1ac09886174f634/sphinx_copybutton/_static/copy-button.svg"
+                        alt="Copy text" style="width: 18px; height: 18px;">
+                </button>
             </div>
+
         </div>
         <div>
             <br><br><br><br><br><br><br><br>
@@ -310,8 +357,7 @@
         </div>
         <div id="gallery_container">
             <template gallery-item-template>
-                <img class='gallery_entry' src='' data-code='' style='width: auto;'
-                    onclick='displayCode(this);'>
+                <img class='gallery_entry' src='' data-code='' style='width: auto;' onclick='displayCode(this);'>
             </template>
 
             <template heading-template>
@@ -336,13 +382,12 @@
                         </div>
                     </td>
                     <td class="info_version">
-                        <p style="opacity: 0.8;"> <a title="Plywood Core at GitHub"
-                                href="https://github.com/kolibril13/plywood-gallery-matplotlib-scalebar"><span
+                        <p style="opacity: 0.8;"> <a title="Plywood Core at GitHub" href="https://github.com/kolibril13/plywood-gallery-matplotlib-scalebar"><span
                                     class="tooltip">user content v0.8.1 (Matplotlib Scalebar) </span></a><br></p>
 
                         <p style="opacity: 0.4;"> <a title="Plywood Core at GitHub"
                                 href="https://github.com/kolibril13/plywood-gallery"><span class="tooltip">
-                                    plywood core v0.0.12</span></a></p>
+                                    plywood core v0.0.13</span></a></p>
                     </td>
                 </tr>
                 <tr>
@@ -409,7 +454,7 @@
     function displayCode(imgs) {
         // Escape the HTML
         codeSnippet.innerHTML = new Option(imgs.dataset.code).innerHTML
-        
+
         hljs.highlightAll();
     }
 
@@ -474,6 +519,20 @@
 
         })
     })
+
+    function myFunction() {
+        const copyText = document.getElementById("code_snippet")
+        navigator.clipboard.writeText(copyText.innerText);
+        console.log(copyText.innerText)
+        var tooltip = document.getElementById("CopyTooltip");
+        tooltip.innerHTML = "Copied";
+    }
+
+    function outFunc() {
+        var tooltip = document.getElementById("CopyTooltip");
+        tooltip.innerHTML = "Copy";
+    }
+
 </script>
 
 </html>
